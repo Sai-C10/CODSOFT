@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Chandran R - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS for centering content */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-size: larger;
+            font-family: Arial, sans-serif; /* Example font */
+        }
+        .header-container, .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: lightslategrey; /* Light gray background */
+        }
+        .logo {
+            flex: 1; /* Occupy remaining space */
+            text-align: right; /* Align logo to the right */
+        }
+        .logo img {
+            max-width: 100px; /* Adjust logo size */
+            height: auto;
+        }
+        .intro {
+            flex: 1; /* Occupy remaining space */
+            text-align: left; /* Align text to the left */
+        }
+        .intro h1 {
+            margin-bottom: 10px; /* Adjust spacing */
+        }
+        #about, #skills, #projects, #resume, #contact {
+            text-align: center;
+            padding: 30px 0; /* Adjusted padding */
+        }
+        .modal-dialog {
+            margin: 1.75rem auto;
+        }
+        .project-link {
+            color: #fff; /* White text for project links */
+        }
+        footer {
+            background-color: #343a40; /* Dark background color for footer */
+            color: #fff; /* White text */
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+        /* Custom CSS for About Me section */
+        .about-content {
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            border: 1px solid #ced4da; /* Gray border */
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Soft shadow */
+        }
+        .about-content h2 {
+            margin-bottom: 20px; /* Adjust spacing */
+        }
+        .copyright {
+            background-color: lightslategrey; /* Dark background color */
+            color: #fff; /* White text */
+            padding: 10px 0; /* Adjust padding as needed */
+            text-align: center; /* Center align the text */
+        }
+    </style>
+</head>
+<body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    <header class="header-container">
+        <div class="intro">
+            <h1>Sai Chandran R</h1>
+            <p>Gamer | Travel Enthusiast | Explorer | Adventure Seeker</p>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="Your Logo">
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>ABOUT ME</h2>
+                <p>"I am a dedicated professional in machine learning and web development, driven by a passion for innovation and problem-solving. 
+                    With expertise in Python and frameworks like Django, I specialize in leveraging data-driven insights to create impactful solutions. 
+                    From predicting Air Quality Index using advanced regression to crafting intuitive Django applications, I thrive on tackling complex challenges. Whether predicting Bangalore house prices or designing interactive travel landing pages, I blend meticulous attention to detail with a creative approach, ensuring each project exceeds expectations. 
+                    Motivated by continuous learning, my portfolio showcases diverse projects translating ideas into tangible results that drive business growth and user satisfaction. With a passion for crafting compelling digital experiences, I eagerly take on new challenges to make a meaningful impact."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">SKILLS</h2>
+                    <ul class="card-text">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>Responsive Web Design</li>
+                        <li>UI/UX Design</li>
+                        <li>Python Programmer</li>
+                        <li>Content Management Systems (CMS)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>PROJECTS</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <!-- Remove card-img-top to hide by default -->
+                        <img src="project-image1.png" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Travel Landing Page</h5>
+                            <p class="card-text"> An engaging landing page designed to captivate visitors with enticing travel destinations, immersive imagery etc.</p>
+                            <a href="#" class="btn btn-primary project-link" data-toggle="modal" data-target="#projectModal1">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <!-- Remove card-img-top to hide by default -->
+                        <img src="project-image2.png" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text"> A personalized portfolio showcasing professional achievements, skills, and projects.</p>
+                            <a href="#" class="btn btn-primary project-link" data-toggle="modal" data-target="#projectModal2">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <!-- Remove card-img-top to hide by default -->
+                        <img src="project-image3.png" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Simple Calculator</h5>
+                            <p class="card-text"> A basic calculator app for performing arithmetic operations.</p>
+                            <a href="#" class="btn btn-primary project-link" data-toggle="modal" data-target="#projectModal3">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">RESUME</h2>
+                    <p class="card-text">Build your resume <a href="resume-form.html" target="_blank">here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">CONTACT ME</h2>
+                    <p class="card-text">Email: Task2@example.com</p>
+                    <p class="card-text">Phone: +1234567890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sai Chandran R. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> by Sai Chandran R</p>
+            <p>Email: Task2@example.com</p>
+            <p>Phone: +1234567890</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Sai Chandran R. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Project Modals -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel1"> <strong>Travel Landing Page</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p> An engaging landing page designed to captivate visitors with enticing travel destinations, immersive imagery, and compelling offers.</p>
+                    <img src="project-image1.png" class="img-fluid" alt="Project 1">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel2"><strong>Portfolio Website</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p> A personalized portfolio showcasing professional achievements, skills, and projects.</p>
+                    <img src="project-image2.png" class="img-fluid" alt="Project 2">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel3" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel3"><strong>Simple Calculator</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p> A basic calculator app for performing arithmetic operations.</p>
+                    <img src="project-image3.png" class="img-fluid" alt="Project 3">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to show project image on modal open -->
+    <script>
+        $(document).ready(function () {
+            $('.project-link').on('click', function () {
+                var targetModalId = $(this).data('target'); // Get modal ID from data-target attribute
+                var imgSrc = $(this).closest('.card').find('img').attr('src'); // Get image source from the clicked card
+                $(targetModalId).find('.modal-body img').attr('src', imgSrc); // Set image source in modal
+            });
+        });
+    </script>
+</body>
+</html>

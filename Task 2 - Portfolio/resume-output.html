@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .resume-container {
+            max-width: 800px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <h1>Resume</h1>
+        <div id="resume-content">
+            <!-- Resume content will be generated here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const resumeData = JSON.parse(localStorage.getItem('resumeData'));
+            if (resumeData) {
+                const resumeContent = `
+                    <h2>${resumeData.name}</h2>
+                    <p>Email: ${resumeData.email}</p>
+                    <p>Phone: ${resumeData.phone}</p>
+                    <h2>Professional Summary</h2>
+                    <p>${resumeData.summary}</p>
+                    <h2>Work Experience</h2>
+                    <p>${resumeData.experience}</p>
+                    <h2>Education</h2>
+                    <p>${resumeData.education}</p>
+                    <h2>Skills</h2>
+                    <p>${resumeData.skills}</p>
+                `;
+                document.getElementById('resume-content').innerHTML = resumeContent;
+            } else {
+                document.getElementById('resume-content').innerHTML = '<p>No resume data found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
